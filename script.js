@@ -63,4 +63,3 @@ function game() {
   } else (i = 5) 
     console.log("Game ower!")
 }
-
