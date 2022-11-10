@@ -46,6 +46,35 @@ function playRound(playerSelection, computerSelection) {
 let playerScore = 0;
 let computerScore = 0;
 
+let playerSelection
+
+
+
+function rockChoice() {
+  return playerSelection = "rock";
+}
+
+
+function paperChoice() {
+  return playerSelection = "paper";
+}
+
+function scissorsChoice() {
+  return playerSelection = "scissors";
+}
+
+
+console.log(playerSelection)
+
+
+/*const playerSelection = element.getElementById("#btn");
+playerSelection.onclick = console.log(playerSelection)
+const computerSelection = getComputerChoice();
+*/
+
+
+
+/*
 //this function play 5 round of game and print result in console
 function game() {
   playRound()
@@ -63,3 +92,4 @@ function game() {
   } else (i = 5) 
     console.log("Game ower!")
 }
+*/
