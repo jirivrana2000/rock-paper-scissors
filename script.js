@@ -1,95 +1,81 @@
-//this function return computer choice
+//this part defined variables
+let playerScore = 0;
+let computerScore = 0;
+let playerSelection = "";
+let computerSelection = "";
+
+//this function return computer choice 
+//A FUNGUJE DOBŘE
 function getComputerChoice() {
   let  myArray = [
     "rock",
     "paper",
     "scissors"
   ];
-  let randomItem = myArray[Math.floor(Math.random()*myArray.length)];
-  return randomItem;
+  let computerSelection = myArray[Math.floor(Math.random()*myArray.length)];
+  if (computerSelection === "rock") {
+    console.log("pc rock")
+  } else if (computerSelection === "paper") {
+    console.log("pc paper")
+  } else if (computerSelection === "scissors") {
+    console.log("pc scissors")
+  }
+  return computerSelection;
 }
 
-//this function return winner of each round
+//this function return winner of each round 
+//A VRACÍ VŽDY JAKOBY BYL VSTUP ROCK A NEVÍM PROČ
 function playRound(playerSelection, computerSelection) {
   switch (playerSelection, computerSelection) {
-    case ("rock", "rock") :
-      return ("Draw!");
+    case (playerSelection === "rock" && computerSelection === "rock") :
+      console.log("Draw");
       break;
-    case ("rock", "paper") :
-      return ("Lose!"), ++computerScore;
+    case (playerSelection === "rock" && computerSelection === "paper") :
+      console.log("Lose!"), ++computerScore;
       break;
-    case ("rock", "scissors") :
-      return ("Win!"), ++playerScore;
+    case (playerSelection === "rock" && computerSelection === "scissors") :
+      console.log("Win!"), ++playerScore;
       break;
-    case ("paper", "rock") :
-      return ("Win!"), ++playerScore;
+    case (playerSelection === "paper" && computerSelection === "rock") :
+      console.log("Win!"), ++playerScore;
       break;
-    case ("paper", "paper") :
-      return ("Draw!");
+    case (playerSelection === "paper" && computerSelection === "paper") :
+      console.log("Draw!");
       break;
-    case ("paper", "scissors") :
-      return ("Lose!"), ++computerScore;
+    case (playerSelection === "paper" && computerSelection === "scissors") :
+      console.log("Lose!"), ++computerScore;
       break;
-    case ("scissors", "rock") :
-      return ("Lose!"), ++computerScore;
+    case (playerSelection === "scissors" && computerSelection === "rock") :
+      console.log("Lose!"), ++computerScore;
       break;
-    case ("scissors", "paper") :
-      return ("Win!"), ++playerScore;
+    case (playerSelection === "scissors" && computerSelection === "paper")  :
+      console.log("Win!"), ++playerScore;
       break;
-    case ("scissors", "scissors") :
-      return ("Draw!");
+    case (playerSelection === "scissors" && computerSelection === "scissors")  :
+      console.log("Draw!");
       break; 
+    default:
+      console.log("something went wrong")
+  }
+  if (playerScore === 5) {
+    alert("Congats, you win!!")
+  } else if (computerScore === 5) {
+    alert("You lose.")
   }
 }
 
-//this part defined variables
-let playerScore = 0;
-let computerScore = 0;
-
-let playerSelection
 
 
-
+//this part return player selection after click
+//TLAČÍTKA FUNGUJÍ SPRÁVNĚ, TĚŽKO ŘÍCT JESTLI VRACÍ TO CO MÁ
 function rockChoice() {
-  return playerSelection = "rock";
+  playRound("rock", getComputerChoice());
 }
-
-
 function paperChoice() {
-  return playerSelection = "paper";
+  playRound("paper", getComputerChoice());
 }
-
 function scissorsChoice() {
-  return playerSelection = "scissors";
+  playRound("scissors", getComputerChoice());
 }
 
 
-console.log(playerSelection)
-
-
-/*const playerSelection = element.getElementById("#btn");
-playerSelection.onclick = console.log(playerSelection)
-const computerSelection = getComputerChoice();
-*/
-
-
-
-/*
-//this function play 5 round of game and print result in console
-function game() {
-  playRound()
-  for (let i = 0; i < 5; i++) {
-    const playerSelection = window.prompt("write your choice!","");
-    const computerSelection = getComputerChoice();
-    console.log(playRound(playerSelection, computerSelection));
-  }
-  if (i = 5 && playerScore > computerScore) {
-    console.log("Congratulation You win!");
-  } else if (i = 5 && playerScore < computerScore) {
-    console.log("You lose, try it again!");
-  } else if (i = 5 && playerScore === computerScore) {
-    console.log("I's draw, try it again!");
-  } else (i = 5) 
-    console.log("Game ower!")
-}
-*/
