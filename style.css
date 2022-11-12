@@ -1,6 +1,86 @@
-.btn {
-    color: black;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  height: 150px;
+  width: 150px;
+  flex-direction: column;
+}
+
+#displayPlayerScore {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+}
+
+
+
+.btncont {
     background-color: lightblue;
-    height: 100px;
-    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid purple;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    flex-direction: column;
+}
+
+.btn {
+  background-color: lightblue;
+  height: 106px;
+  width: 106px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid green;
+  margin: 5px;
+}
+
+.compchoice {
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid blue;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  
+}
+
+.container {
+    display: flex;
+    border: 3px solid yellow;
+    flex-direction: row;
+
+}
+
+li {
+  display: flex;
+  height: 100px;
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  border: 3px solid red;
 }

@@ -26,42 +26,62 @@ function getComputerChoice() {
 //this function return winner of each round 
 //A VRACÍ VŽDY JAKOBY BYL VSTUP ROCK A NEVÍM PROČ
 function playRound(playerSelection, computerSelection) {
-  switch (playerSelection, computerSelection) {
+  switch (true) {
     case (playerSelection === "rock" && computerSelection === "rock") :
       console.log("Draw");
       break;
     case (playerSelection === "rock" && computerSelection === "paper") :
-      console.log("Lose!"), ++computerScore;
+      console.log("Lose!");
+      ++computerScore
       break;
     case (playerSelection === "rock" && computerSelection === "scissors") :
-      console.log("Win!"), ++playerScore;
+      console.log("Win!");
+      ++playerScore
       break;
     case (playerSelection === "paper" && computerSelection === "rock") :
-      console.log("Win!"), ++playerScore;
+      console.log("Win!");
+      ++playerScore
       break;
     case (playerSelection === "paper" && computerSelection === "paper") :
       console.log("Draw!");
       break;
     case (playerSelection === "paper" && computerSelection === "scissors") :
-      console.log("Lose!"), ++computerScore;
+      console.log("Lose!");
+      ++computerScore
       break;
     case (playerSelection === "scissors" && computerSelection === "rock") :
-      console.log("Lose!"), ++computerScore;
+      console.log("Lose!");
+      ++computerScore
       break;
     case (playerSelection === "scissors" && computerSelection === "paper")  :
-      console.log("Win!"), ++playerScore;
+      console.log("Win!");
+      ++playerScore
       break;
     case (playerSelection === "scissors" && computerSelection === "scissors")  :
       console.log("Draw!");
       break; 
-    default:
-      console.log("something went wrong")
   }
+
   if (playerScore === 5) {
     alert("Congats, you win!!")
   } else if (computerScore === 5) {
     alert("You lose.")
   }
+
+  let displayPlayerScore = document.querySelector("#displayPlayerScore").innerHTML = `Score: ${playerScore}`;
+  let displayPCScore = document.querySelector("#displayPCScore").innerHTML = `Score: ${computerScore}`; 
+   /*let realPlayerScore = document.createElement("div")
+  realPlayerScore.classList.add("realPlayerScore");
+  realPlayerScore.innerHTML = `<p>${playerScore}</p>`;
+
+
+  
+  let realPlayerScore = document.createElement("div")
+  realPlayerScore.classList.add("realPlayerScore");
+  realPlayerScore.textContent = `${playerScore}`
+
+  displayPlayerScore.appendChild(realPlayerScore);
+  */
 }
 
 

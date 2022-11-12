@@ -7,12 +7,37 @@
     <title>Rock Paper Scissors</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button class="btn" onclick="rockChoice()">Rock</button>
-    <button class="btn" onclick="paperChoice()">Paper</button>
-    <button class="btn" onclick="scissorsChoice()">Scissors</button>
+  
+  <div class="header">
+      <div class="score">
+        <p class="scoreContainer">PC</p>
+        <p id="displayPCScore">Score: 0</p>
+      </div>
+      <h1>Rock Paper Scissors</h1>
+      <div class="score">
+        <p class="scoreContainer">YOU</p>
+        <p id="displayPlayerScore">Score: 0</p>
+      </div>
+  </div>
+
+  <div class="container">
+
+    <ul class="compchoice">
+        <li>Rock</li>
+        <li>Paper</li>
+        <li>Scissors</li>
+    </ul>
+    <div class="btncont">
+        <button class="btn" onclick="rockChoice()">Rock</button>
+        <button class="btn" onclick="paperChoice()">Paper</button>
+        <button class="btn" onclick="scissorsChoice()">Scissors</button>
+    </div>
+  </div>
 
 
 </body>
