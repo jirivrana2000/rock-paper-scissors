@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="cz">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
-  
   <div class="header">
-      <div class="score">
-        <p class="scoreContainer">PC</p>
-        <p id="displayPCScore">Score: 0</p>
-      </div>
-      <h1>Rock Paper Scissors</h1>
-      <div class="score">
-        <p class="scoreContainer">YOU</p>
-        <p id="displayPlayerScore">Score: 0</p>
-      </div>
-  </div>
-
-  <div class="container">
-
-    <ul class="compchoice">
-        <li>Rock</li>
-        <li>Paper</li>
-        <li>Scissors</li>
-    </ul>
-    <div class="btncont">
-        <button class="btn" onclick="rockChoice()">Rock</button>
-        <button class="btn" onclick="paperChoice()">Paper</button>
-        <button class="btn" onclick="scissorsChoice()">Scissors</button>
+    <div class="score">
+      <p class="scoreContainer">PC</p>
+      <p id="displayPCScore">Score: 0</p>
+    </div>
+    <h1>Rock Paper Scissors</h1>
+    <div class="score">
+      <p class="scoreContainer">YOU</p>
+      <p id="displayPlayerScore">Score: 0</p>
     </div>
   </div>
-
-
+  <div class="container">
+    <ul class="compchoice">
+      <li id="PCRock"><img src="img/rock.svg"></li>
+      <li id="PCPaper"><img src="img/paper.svg"></li>
+      <li id="PCScissors"><img src="img/scissors.svg"></li>
+    </ul>
+    <div class="centerInfo">
+      <div id="roundWinner"></div>
+      <div class="instructions">
+        <h2>INSTRUCTIONS</h2>
+        <p>Play by clicking your choice on right side buttons. ===><br>You can see your score on Up-right, and Up-left is score of PC.<br>First one who get 5 points is winer.</p>
+        <p>Enjoy!</p>
+      </div>
+    </div>
+    <div class="btncont">
+      <button class="btn" onclick="rockChoice()"><img src="img/rock.svg"></button>
+      <button class="btn" onclick="paperChoice()"><img src="img/paper.svg"></button>
+      <button id="scissors" class="btn" onclick="scissorsChoice()"><img src="img/scissors.svg"></button>
+    </div>
+  </div>
 </body>
 </html>

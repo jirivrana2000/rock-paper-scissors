@@ -1,18 +1,23 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Poppins', sans-serif;
+  background-color: black;
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
 }
 
 h1 {
   display: flex;
   align-items: center;
+  color: #0ff;
+  font-size: 40px;
+  text-shadow: 0 0 50px #0ff, 0 0 21px #0ff;
 }
 
 .score {
@@ -23,6 +28,10 @@ h1 {
   height: 150px;
   width: 150px;
   flex-direction: column;
+  margin: 30px;
+  margin-top: 20px;
+  color: #0ff;
+  font-size: 25px;
 }
 
 #displayPlayerScore {
@@ -31,56 +40,116 @@ h1 {
   margin: 0px;
 }
 
-
-
-.btncont {
-    background-color: lightblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid purple;
-    margin: 0;
-    margin-left: auto;
-    padding: 0;
-    flex-direction: column;
-}
-
-.btn {
-  background-color: lightblue;
-  height: 106px;
-  width: 106px;
+#displayPCScore {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 3px solid green;
-  margin: 5px;
-}
-
-.compchoice {
-  background-color: lightblue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 3px solid blue;
-  margin: 0;
-  padding: 0;
-  flex-direction: column;
-  
+  flex-direction: row;
+  margin: 0px;
 }
 
 .container {
-    display: flex;
-    border: 3px solid yellow;
-    flex-direction: row;
+  display: flex;
+  border: 10px solid black;
+  flex-direction: row;
+  background-color: black;
+  justify-content: space-between;
+  margin: 0px;
+  padding: auto;
+}
 
+.compchoice {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  flex-direction: column;
 }
 
 li {
   display: flex;
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   justify-content: center;
   align-items: center;
   margin: 5px;
-  border: 3px solid red;
+  border: 15px solid #0ff;
+  border-radius: 30px;
+  transform: rotate(90deg);
+  padding: 0px;
+  background-color: #0ff;
+}
+
+.centerInfo {
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+}
+
+#roundWinner {
+  margin-bottom: 0px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  color: #0ff;
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+}
+
+.instructions {
+  color: #0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0px;
+  margin: auto;
+  margin-left: auto;
+  margin-top: 40px;
+}
+
+.btncont {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  padding: 0px;
+  margin: 0px;
+  flex-direction: column;
+}
+
+.btn {
+  background-color: #0ff;
+  height: 180px;
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 15px solid #0ff;
+  border-radius: 30px;
+  margin: 5px;
+  margin-top: 5px;
+  transform: rotate(270deg) scaleX(-1);
+  padding: 0px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 0 0 50px #0ff, 0 0 21px #0ff;
+}
+
+.scissors {
+  transform: rotate(0deg) scaleX(-1);
+}
+
+#scissors {
+  transform: rotate(0deg);
+}
+
+.computerPick {
+  box-shadow: 0 0 50px #0ff, 0 0 21px #0ff;
+  transition-duration: 100ms;
 }
